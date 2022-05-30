@@ -6,6 +6,11 @@ if (document.readyState == 'loading'){
 
 function ready() {
     var btn = document.getElementById('btn');
+    var divs = document.getElementsByClassName('pass')
+    for (var i = 0; i < divs.length; i++) {
+        var div = divs[i];
+        div.addEventListener('click',copyPass);
+    }
     btn.addEventListener('click',displayPass);
 }
 
@@ -41,4 +46,19 @@ function generateRandomChar(){
     let num = Math.floor(Math.random()*94) + 33;
     let char = String.fromCharCode(num);
     return char
+}
+function copyPass(eve) {
+    let div = eve.target;
+    let text = div.innerText;
+    if (text !== '.....') {
+        let textArea  = document.createElement('textarea');
+        textArea.width  = "1px"; 
+        textArea.height = "1px";
+        textArea.background =  "transparents" ;
+        textArea.value = text;
+        document.body.append(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+    }
 }
