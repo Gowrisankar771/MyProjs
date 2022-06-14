@@ -1,5 +1,52 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background-image: url('background.jpg');
     background-color: rgba(50,50,50,0.5);
     background-blend-mode: multiply;
+}
+
+.keys{
+    display : flex;
+    flex-grow: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.key {
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all 0.08s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+}
+
+kbd{
+    display : block;
+    font-size : 4rem;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+    font-family: sans-serif;
+}
+
+.playing{
+    transform : scale(1.2);
+    border-color: #ffc600;
+    box-shadow: 0 0 1em #ffc600;
 }
