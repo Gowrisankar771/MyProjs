@@ -80,6 +80,9 @@
     font-family : sans-serif;
     box-shadow : 5px 5px 10px #0a7e57;
   }
+  .pass:hover {
+    cursor: pointer;
+  }
   .gen-class{
     display : flex;
     height : 100px;
